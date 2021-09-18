@@ -27,7 +27,8 @@ class MainInput extends Component {
     }
     onSubmit(e){
       e.preventDefault();
-      this.props.onAdd(this.state.text);
+      // console.log(this.state.text);
+      this.props.onAdd(this.state.checked,this.state.text);
       this.setState({
         text: ''
       });
@@ -35,28 +36,30 @@ class MainInput extends Component {
     render() {
         let categoryButton;
         // let {checked} = this.props;
-        this.state.checked ? categoryButton = 'Финансы': categoryButton = 'Личные';
+        this.state.checked ? categoryButton = 'Личные': categoryButton = 'Финансы';
         return (
             <form
               className='MainInput d-flex justify-content-center align-items-center mb-5'
-              onSubmit={this.onSubmit}>
+              onSubmit = {this.onSubmit}>
                 <h4
                   className="my-0 mx-3">
                     Новый пункт
                 </h4>
                 <button
-                  className="CategoryButton btn btn-outline-secondary mx-3"
-                  onClick={this.onClickBtn}>
+                  type      ="button"
+                  className ="CategoryButton btn btn-outline-secondary mx-3"
+                  onClick   = {this.onClickBtn}>
                     {categoryButton}
                 </button>
                 <input 
-                  type="text" 
-                  className="mx-3 px-2 py-1"
-                  onChange = {this.onValueChange}
+                  type      = "text" 
+                  className = "mx-3 px-2 py-1"
+                  onChange  = {this.onValueChange}
+                  value     = {this.state.text}
                 />
                 <button
-                  type="submit"
-                  className="AddButton btn btn-outline-secondary mx-3"
+                  type      ="submit"
+                  className ="AddButton btn btn-outline-secondary mx-3"
                   /* onClick={}*/>
                     Добавить
                 </button>

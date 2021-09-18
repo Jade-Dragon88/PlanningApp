@@ -8,14 +8,15 @@ class MainBodyContent extends Component {
     }
     render() {
         const { inputValue } = this.props;
+        // console.log(inputValue);
         let toFin='',toMe='';
         // if(type === 'финансы'){toFin=inputValue; toMe=''}
         // if(type==='личные'){toFin=''; toMe=inputValue}
         return (
             <div
               className='MainBodyContent d-flex justify-contenet-center w-100'>
-                <MainBodyContentList category='финансы' border='right' inputValue={inputValue}/>
-                <MainBodyContentList category='личные'  border='left'  inputValue={inputValue}/>
+                <MainBodyContentList cat = 'финансы' border = 'right' inputValue = {inputValue} n='0'/>
+                <MainBodyContentList cat = 'личные'  border = 'left'  inputValue = {inputValue} n='1'/>
             </div>
         )
     }

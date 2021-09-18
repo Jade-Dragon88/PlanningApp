@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './MainBody.css';
 
-import Category from '../сategories/category';
+import Category from '../Categories/category';
 import MainInput from '../MainInput/MainInput';
 import MainBodyContent from '../MainBody_Content/MainBody_Content'
 
@@ -12,32 +12,38 @@ class MainBody extends Component {
         super(props);
         this.state = {
             data : [
-                {label: "!!! Going to learn React !!!", id:nextId()},
+                // {label: "!!! Going to learn React !!!", id:nextId()},
                 // {label: "That is so good", id:nextId()},
                 // {label: "I need a break...", id:nextId()}
             ]
         }
         this.addItem = this.addItem.bind(this);
     }
-    addItem(body){
+    addItem(){
         const newItem = {
-                label:body,
+                cat:arguments[0],
+                label:arguments[1],
                 id: nextId()
         }
+        // console.log(newItem);
+        // console.log(this.state);
         this.setState(({data}) => {
             const newArr = [...data, newItem];
+            // console.log(newArr);
             return {
-                data:newArr
+                data: newArr
             };
         });
     }
     render() {
         const { data } = this.state;
-        const inputValue = data;
+        // console.log(`____render____`);
+        // const inputValue = data;
+        // console.log(inputValue);
         return (
             <div 
               className="MainBody">
-                <MainInput checked = 'false'
+                <MainInput checked = {false}
                            onAdd={this.addItem}
                 />
                 <div
@@ -45,7 +51,7 @@ class MainBody extends Component {
                     <Category nm="Финансы" border='right'/>
                     <Category nm="Личные"  border='left'/>
                 </div>
-                <MainBodyContent inputValue={inputValue}/>
+                <MainBodyContent inputValue={data}/>
             </div>
         );
     }

@@ -6,9 +6,12 @@
     color:black;
     font-size:1.5rem;
     font-weight:400;
-    /* width: 90px; */
+    /* width: 125px; */
     box-sizing: border-box !important;
     /* transition: none !important; */
+}
+.MainInput .CategoryButton{
+    width: 125px;
 }
 .MainInput .CategoryButton:focus,
 .MainInput .AddButton:focus{
