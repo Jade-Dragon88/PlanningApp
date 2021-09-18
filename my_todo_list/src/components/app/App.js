@@ -1,12 +1,16 @@
 // import logo from './logo.svg';
+import './App.css';
+
 import React, { Component } from 'react';
-import AppHeader from '../app_header/app_header'
-// import './App.css';
+import MainHeader from '../MainHeader/MainHeader'
+import MainBody from '../MainBody/MainBody'
+
 
 function App() {
   return (
-    <div className="App">
-      <AppHeader name="ОВЧИННИКОВ ОЛЕГ"/>
+    <div className="Main">
+      <MainHeader name="ПЛАНИРОВАНИЕ"/>
+      <MainBody/>
 
 
 

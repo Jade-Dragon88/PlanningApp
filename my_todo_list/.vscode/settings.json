@@ -1,0 +1,17 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.optimizeStylesheetParsing": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "spellright.language": [
+        "en"
+      ],
+      "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "javascript"
+      ]
+}

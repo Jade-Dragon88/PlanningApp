@@ -1,0 +1,7 @@
+body{
+    height: 100vh;
+}
+#root,.Main{
+    height: 100%;
+    min-height: 100%;
+}

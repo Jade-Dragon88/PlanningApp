@@ -1,0 +1,12 @@
+.MainBodyContentList.left{
+    border-left: 1px solid black;
+}
+.MainBodyContentList.right{
+    border-right: 1px solid black;
+}
+.MainBodyContentList li{
+    margin-left: 12.5%;
+    margin-right: 12.5% ;
+    font-size: 21px;
+    border: none;
+}

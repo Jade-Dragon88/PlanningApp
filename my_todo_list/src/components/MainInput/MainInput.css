@@ -1,0 +1,23 @@
+.MainInput h4{
+    line-height: 1 !important;
+}
+.MainInput .CategoryButton,
+.MainInput .AddButton{
+    color:black;
+    font-size:1.5rem;
+    font-weight:400;
+    /* width: 90px; */
+    box-sizing: border-box !important;
+    /* transition: none !important; */
+}
+.MainInput .CategoryButton:focus,
+.MainInput .AddButton:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.MainInput input{
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+    width: 400px;
+    box-sizing: border-box !important;
+}

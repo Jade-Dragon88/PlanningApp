@@ -1,0 +1,9 @@
+.Category.left{
+    border-left: 1px solid black !important;
+}
+.Category.right{
+    border-right: 1px solid black !important;
+}
+.Category h2 {
+    line-height: 1 !important;
+}
