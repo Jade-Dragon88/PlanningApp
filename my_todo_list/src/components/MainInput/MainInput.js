@@ -24,6 +24,7 @@ class MainInput extends Component {
       this.setState({
           text: e.target.value
       });
+      // console.log(this.state.text);
     }
     onSubmit(e){
       e.preventDefault();
@@ -53,7 +54,7 @@ class MainInput extends Component {
                 </button>
                 <input 
                   type      = "text" 
-                  className = "mx-3 px-2 py-1"
+                  className = "NewNote mx-3 px-2 py-1"
                   onChange  = {this.onValueChange}
                   value     = {this.state.text}
                 />

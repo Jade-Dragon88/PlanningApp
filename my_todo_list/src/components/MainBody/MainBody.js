@@ -20,6 +20,7 @@ class MainBody extends Component {
         this.addItem = this.addItem.bind(this);
     }
     addItem(){
+        // console.log(arguments[1]);
         const newItem = {
                 cat:arguments[0],
                 label:arguments[1],
