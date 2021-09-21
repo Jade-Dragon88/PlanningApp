@@ -17,7 +17,7 @@ class MainBodyContentList extends Component {
 
     // }
     render() {
-        let {cat, border, inputValue} = this.props;
+        let {cat, border, inputValue, onDeleteItem } = this.props;
         // console.log('inputValue');
         // console.log(inputValue);
         const listClassName = `MainBodyContentList ${border} pt-4 w-50`;
@@ -34,23 +34,27 @@ class MainBodyContentList extends Component {
                             .map((item) => {
                                 const {label, id} = item;
                                 // console.log(label);
+                                const inputKey = `${id}_input`
+                                // const inputId = 
                                 const labelKey = `${id}_label`;
-                                const DeleteItemId = `${id}_delete`
+                                const deleteItemKey = `${id}_delete`
                                 // let inputClass = "custom-checkbox";
                                 return(
                                     // <li key={id} className={id}
                                     //     onClick={() => {console.log(label)}}>
                                     //     {label}
                                     // </li>
-                                    <p className="ItemContainer d-flex align-items-center">
-                                        <input key={id}  
+                                    <p className="ItemContainer d-flex align-items-center"
+                                        key={id}
+                                        id={id}>
+                                        <input key={inputKey}  
                                             type="checkbox"
                                             className="custom-checkbox"
-                                            id={id} 
-                                            name={id} 
+                                            id={inputKey} 
+                                            name={inputKey} 
                                             value="yes"
                                         />
-                                        <label htmlFor={id}
+                                        <label htmlFor={inputKey}
                                             key={labelKey} 
                                             className='flex-grow-1'
                                             id={labelKey}
@@ -58,11 +62,12 @@ class MainBodyContentList extends Component {
                                                 {label}
                                         </label>
                                         <button
+                                            key={deleteItemKey}
                                             type="button"
                                             className="DeleteItem btn-trash btn-sm "
-                                            id={DeleteItemId}
+                                            id={deleteItemKey}
                                             // onClick={() => {console.log('Удалил!!!')}}
-                                            // onClick={onDeleteItem}
+                                            onClick={()=> {onDeleteItem(id)}}
                                             >
                                             <i className="fas fa-times"></i>
                                         </button>

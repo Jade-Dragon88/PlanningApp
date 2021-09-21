@@ -7,7 +7,7 @@ class MainBodyContent extends Component {
         this.state = {}
     }
     render() {
-        const { inputValue } = this.props;
+        const { inputValue, onDeleteItem } = this.props;
         // console.log(inputValue);
         // let toFin='',toMe='';
         // if(type === 'финансы'){toFin=inputValue; toMe=''}
@@ -15,8 +15,18 @@ class MainBodyContent extends Component {
         return (
             <div
               className='MainBodyContent d-flex justify-content-center w-100'>
-                <MainBodyContentList cat = 'Вера' border = 'right' inputValue = {inputValue}/>
-                <MainBodyContentList cat = 'Олег'  border = 'left'  inputValue = {inputValue}/>
+                <MainBodyContentList 
+                    cat = 'Вера' 
+                    border = 'right' 
+                    inputValue = {inputValue}
+                    onDeleteItem = {onDeleteItem}
+                    />
+                <MainBodyContentList 
+                    cat = 'Олег'  
+                    border = 'left'  
+                    inputValue = {inputValue}
+                    onDeleteItem = {onDeleteItem}
+                    />
             </div>
         )
     }
