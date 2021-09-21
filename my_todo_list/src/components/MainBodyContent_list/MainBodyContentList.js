@@ -13,12 +13,15 @@ class MainBodyContentList extends Component {
     changeInputClass() {
         // console.log(arguments);
     }
+    // onDeleteItem(){
+
+    // }
     render() {
         let {cat, border, inputValue} = this.props;
         // console.log('inputValue');
         // console.log(inputValue);
         const listClassName = `MainBodyContentList ${border} pt-4 w-50`;
-        cat === 'финансы' ? cat = false : cat = true;
+        cat === 'Вера' ? cat = false : cat = true;
         // console.log('category');
         // console.log(cat);
         // console.log('n');
@@ -32,13 +35,14 @@ class MainBodyContentList extends Component {
                                 const {label, id} = item;
                                 // console.log(label);
                                 const labelKey = `${id}_label`;
+                                const DeleteItemId = `${id}_delete`
                                 // let inputClass = "custom-checkbox";
                                 return(
                                     // <li key={id} className={id}
                                     //     onClick={() => {console.log(label)}}>
                                     //     {label}
                                     // </li>
-                                    <div>
+                                    <p className="ItemContainer d-flex align-items-center">
                                         <input key={id}  
                                             type="checkbox"
                                             className="custom-checkbox"
@@ -48,17 +52,21 @@ class MainBodyContentList extends Component {
                                         />
                                         <label htmlFor={id}
                                             key={labelKey} 
-                                            className={labelKey}
+                                            className='flex-grow-1'
+                                            id={labelKey}
                                             onClick={this.changeInputClass}>
                                                 {label}
                                         </label>
-                                        {/* <button  */}
-                                            {/* type="button"   */}
-                                            {/* className="btn-trash btn-sm" */}
-                                            {/* onClick={onDelete}/> */}
-                                            {/* <i className="far fa-trash-o"></i> */}
-                                        {/* </button> */}
-                                    </div>
+                                        <button
+                                            type="button"
+                                            className="DeleteItem btn-trash btn-sm "
+                                            id={DeleteItemId}
+                                            // onClick={() => {console.log('Удалил!!!')}}
+                                            // onClick={onDeleteItem}
+                                            >
+                                            <i className="fas fa-times"></i>
+                                        </button>
+                                    </p>
                                 )
                             })
             // console.log(`++++++++++`);

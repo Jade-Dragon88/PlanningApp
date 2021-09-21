@@ -37,7 +37,7 @@ class MainInput extends Component {
     render() {
         let categoryButton;
         // let {checked} = this.props;
-        this.state.checked ? categoryButton = 'Личные': categoryButton = 'Финансы';
+        this.state.checked ? categoryButton = 'Олег': categoryButton = 'Вера';
         return (
             <form
               className='MainInput d-flex justify-content-center align-items-center mb-5'

@@ -36,6 +36,9 @@ class MainBody extends Component {
             };
         });
     }
+    onDeleteItem(){
+        
+    }
     render() {
         const { data } = this.state;
         // console.log(`____render____`);
@@ -49,8 +52,8 @@ class MainBody extends Component {
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">
-                    <Category nm="Финансы" border='right'/>
-                    <Category nm="Личные"  border='left'/>
+                    <Category nm="Вера" border='right'/>
+                    <Category nm="Олег"  border='left'/>
                 </div>
                 <MainBodyContent inputValue={data}/>
             </div>

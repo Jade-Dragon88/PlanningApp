@@ -15,8 +15,8 @@ class MainBodyContent extends Component {
         return (
             <div
               className='MainBodyContent d-flex justify-content-center w-100'>
-                <MainBodyContentList cat = 'финансы' border = 'right' inputValue = {inputValue}/>
-                <MainBodyContentList cat = 'личные'  border = 'left'  inputValue = {inputValue}/>
+                <MainBodyContentList cat = 'Вера' border = 'right' inputValue = {inputValue}/>
+                <MainBodyContentList cat = 'Олег'  border = 'left'  inputValue = {inputValue}/>
             </div>
         )
     }
