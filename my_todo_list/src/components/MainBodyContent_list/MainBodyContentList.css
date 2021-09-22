@@ -22,12 +22,6 @@
     text-decoration: none;
     background-color: #fff;
 }
-.MainBodyContentList .left{
-    /* margin-left: 12.5%; */
-}
-.MainBodyContentList .right{
-    /* margin-right: 12.5%; */
-}
 .MainBodyContentList .custom_checkbox_label:hover{
     cursor: pointer;
 }
