@@ -37,7 +37,7 @@ class MainInput extends Component {
     render() {
         let categoryButton;
         // let {checked} = this.props;
-        this.state.checked ? categoryButton = 'Олег': categoryButton = 'Вера';
+        this.state.checked ? categoryButton = 'Личное': categoryButton = 'Финансы';
         return (
             <form
               className='MainInput d-flex justify-content-center align-items-center mb-5'
@@ -57,6 +57,8 @@ class MainInput extends Component {
                   className = "NewNote mx-3 px-2 py-1"
                   onChange  = {this.onValueChange}
                   value     = {this.state.text}
+                  title=""
+                  placeholder=""
                 />
                 <button
                   type      ="submit"

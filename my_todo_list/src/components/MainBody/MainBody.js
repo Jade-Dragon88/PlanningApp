@@ -31,7 +31,7 @@ class MainBody extends Component {
         // console.log(this.state);
         this.setState(({data}) => {
             const newArr = [...data, newItem];
-            // console.log(newArr);
+            console.log(newArr);
             return {
                 data: newArr
             };
@@ -62,8 +62,8 @@ class MainBody extends Component {
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">
-                    <Category nm="Вера" border='right'/>
-                    <Category nm="Олег"  border='left'/>
+                    <Category nm="Финансы" border='right'/>
+                    <Category nm="Личное"  border='left'/>
                 </div>
                 <MainBodyContent inputValue={data}
                                  onDeleteItem={this.onDeleteItem}

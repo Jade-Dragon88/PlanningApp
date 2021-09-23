@@ -16,13 +16,13 @@ class MainBodyContent extends Component {
             <div
               className='MainBodyContent d-flex justify-content-center w-100'>
                 <MainBodyContentList 
-                    cat = 'Вера' 
+                    cat = 'Финансы' 
                     border = 'right' 
                     inputValue = {inputValue}
                     onDeleteItem = {onDeleteItem}
                     />
                 <MainBodyContentList 
-                    cat = 'Олег'  
+                    cat = 'Личное'  
                     border = 'left'  
                     inputValue = {inputValue}
                     onDeleteItem = {onDeleteItem}

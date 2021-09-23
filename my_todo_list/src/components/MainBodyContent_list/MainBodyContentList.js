@@ -21,7 +21,7 @@ class MainBodyContentList extends Component {
         // console.log('inputValue');
         // console.log(inputValue);
         const listClassName = `MainBodyContentList ${border} pt-4 w-50`;
-        cat === 'Вера' ? cat = false : cat = true;
+        cat === 'Финансы' ? cat = false : cat = true;
         // console.log('category');
         // console.log(cat);
         // console.log('n');
@@ -51,8 +51,7 @@ class MainBodyContentList extends Component {
                                             type="checkbox"
                                             className="custom-checkbox"
                                             id={inputKey} 
-                                            name={inputKey} 
-                                            value="yes"
+                                            name={inputKey}
                                         />
                                         <label htmlFor={inputKey}
                                             key={labelKey} 
