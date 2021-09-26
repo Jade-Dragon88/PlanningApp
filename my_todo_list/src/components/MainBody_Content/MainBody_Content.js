@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MainBodyContentList from '../MainBodyContent_list/MainBodyContentList'
+import './MainBody_Content.css'
 
 class MainBodyContent extends Component {
     constructor(props) {
@@ -14,19 +15,24 @@ class MainBodyContent extends Component {
         // if(type==='личные'){toFin=''; toMe=inputValue}
         return (
             <div
-              className='MainBodyContent d-flex justify-content-center w-100'>
-                <MainBodyContentList 
-                    cat = 'Финансы' 
-                    border = 'right' 
-                    inputValue = {inputValue}
-                    onDeleteItem = {onDeleteItem}
+              className='MainBodyContent d-flex justify-content-center w-100 mt-3'>
+                <div className='w-50 right' border = 'right'>
+                    <MainBodyContentList 
+                        cat = 'Финансы' 
+                        // border = 'right' 
+                        inputValue = {inputValue}
+                        onDeleteItem = {onDeleteItem}
                     />
-                <MainBodyContentList 
-                    cat = 'Личное'  
-                    border = 'left'  
-                    inputValue = {inputValue}
-                    onDeleteItem = {onDeleteItem}
+                </div>
+                <div className='w-50 left' border = 'left'>
+                    <MainBodyContentList 
+                        cat = 'Личное'  
+                        // border = 'left'  
+                        inputValue = {inputValue}
+                        onDeleteItem = {onDeleteItem}
                     />
+                </div>
+                
             </div>
         )
     }

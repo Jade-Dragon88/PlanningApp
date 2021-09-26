@@ -1,12 +1,14 @@
-.MainBodyContentList.left{
-    border-left: 1px solid black;
-    padding-left: 5%;
-    padding-right: 7.5%;
+.MainBodyContentList .left{
+    /* border-left: 1px solid black; */
+    margin-left: 5%;
+    margin-right: 7.5%;
+    /* background: #bde2f3; */
 }
-.MainBodyContentList.right{
-    border-right: 1px solid black;
-    padding-left: 7.5%;
-    padding-right: 5%;
+.MainBodyContentList .right{
+    /* border-right: 1px solid black; */
+    margin-left: 7.5%;
+    margin-right: 5%;
+    /* background: #bde2f3; */
 }
 /* .MainBodyContentList ul{
     list-style-type: none !important;
@@ -20,8 +22,12 @@
     padding: 0.5rem 1rem;
     color: #212529;
     text-decoration: none;
-    background-color: #fff;
+    background-color: #bde2f3;
 }
+/* .MainBodyContentList i{
+    color:crimson;
+} */
+
 .MainBodyContentList .custom_checkbox_label:hover{
     cursor: pointer;
 }
@@ -88,11 +94,12 @@
 }
 label{
     font-size: 25px;
-    line-height: 40px;
+    line-height: 125%;
+    padding-right: 1rem;
 }
 .DeleteItem{
-    width: 2rem;
-    height: 2rem;
+    /* width: 2rem; */
+    /* height: 2rem; */
     /* width: 25px;
     height: 25px; */
     box-sizing: border-box;
@@ -100,6 +107,12 @@ label{
     border-radius: 0.5em;
     background-color: transparent;
     opacity: 0;
+    color:red;
+    font-weight: bold;
+}
+.ItemContainer{
+    /* background: #fff; */
+
 }
 .ItemContainer:hover > .DeleteItem{
     opacity: 1;

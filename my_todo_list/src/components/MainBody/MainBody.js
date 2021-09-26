@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MainBody.css';
 
 import Category from '../Categories/category';
-import MainInput from '../MainInput/MainInput';
+import Input from '../Input/Input';
 import MainBodyContent from '../MainBody_Content/MainBody_Content'
 
 let nextId = () => {return Math.random().toString(36).substr(2, 7);};
@@ -31,7 +31,7 @@ class MainBody extends Component {
         // console.log(this.state);
         this.setState(({data}) => {
             const newArr = [...data, newItem];
-            console.log(newArr);
+            // console.log(newArr);
             return {
                 data: newArr
             };
@@ -51,19 +51,29 @@ class MainBody extends Component {
     }
     render() {
         const { data } = this.state;
+        const { cats } = this.props;
+        // console.log(cats);
         // console.log(`____render____`);
         // const inputValue = data;
         // console.log(inputValue);
+        let catsToRender = cats.map(item => {
+            return (
+                <Category nm={item} key={nextId()}/>
+            )
+        })
+        // console.log(catsToRender);
         return (
             <div 
               className="MainBody">
-                <MainInput checked = {false}
+                <Input checked = {false}
                            onAdd={this.addItem}
+                           title=''
+                           displayCatBtn={true}
+                           placeholder='Добавьте новый пункт'
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">
-                    <Category nm="Финансы" border='right'/>
-                    <Category nm="Личное"  border='left'/>
+                    {catsToRender}
                 </div>
                 <MainBodyContent inputValue={data}
                                  onDeleteItem={this.onDeleteItem}

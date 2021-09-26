@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import './MainHeader.css'
+import './Header.css'
 
-class MainHeader extends Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {}
     }
     render() {
-        const {name} = this.props;
+        const {name,margin} = this.props;
         return (
             <div className="MainHeader d-flex justify-content-center align-items-center">
-                <h1 
-                    className="mt-5 mb-5"
-                    
-                >
+                <h1 className={`${margin}`}>
                     {name}
                 </h1>
             </div>
@@ -21,4 +18,4 @@ class MainHeader extends Component {
     }
 }
 
-export default MainHeader;
+export default Header;

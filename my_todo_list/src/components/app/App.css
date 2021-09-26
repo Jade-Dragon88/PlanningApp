@@ -1,11 +1,12 @@
 body{
     height: 100vh;
+    background: #bde2f3;
+
 }
 #root,.Main{
     height: 100%;
     min-height: 100%;
 }
-/* i {
-    font-style: normal !important;
-    font-family: fontawesome !important;
-} */
+.rounded-lg{
+    border-radius: .5rem !important;
+}

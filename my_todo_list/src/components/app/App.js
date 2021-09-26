@@ -1,18 +1,44 @@
 // import logo from './logo.svg';
 import './App.css';
 
-import React from 'react';
-import MainHeader from '../MainHeader/MainHeader'
+// import React from 'react';
+import React, { Component } from 'react'
+import AddCategories from '../AddCategories/AddCategories'
+import Header from '../Header/Header'
 import MainBody from '../MainBody/MainBody'
 
 
-function App() {
-  return (
-    <div className="Main">
-      <MainHeader name="ПЛАНИРОВАНИЕ"/>
-      <MainBody/>
-    </div>
-  );
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: [
+        'Финансы',
+        'Личное'
+      ]
+    }
+    this.addCat = this.addCat.bind(this);
+  }
+  addCat(){
+    // this.setState(item => console.log(item))
+    const newCat = arguments[1];
+    // console.log(newCat);
+    this.state.categories.push(newCat);
+    console.log(this.state.categories);
+  }
+  render() {
+    // const { categories } = this.state;
+    return (
+      <div className="Main">
+        <AddCategories addCat={this.addCat}/>
+        <Header name="МОИ ПЛАНЫ"
+                margin='my-5'
+        />
+        <MainBody cats={this.state.categories}/>
+      </div>
+    )
+  }
 }
 
 export default App;

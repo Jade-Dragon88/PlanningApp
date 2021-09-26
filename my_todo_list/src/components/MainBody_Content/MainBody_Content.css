@@ -1,0 +1,12 @@
+.right{
+    /* border-right: 1px solid black; */
+    background: #bde2f3;
+}
+.left{
+    /* border-left: 1px solid black; */
+    background: #bde2f3;
+}
+
+.MainBodyContent > div{
+    background: #bde2f3;
+}

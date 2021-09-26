@@ -17,10 +17,10 @@ class MainBodyContentList extends Component {
 
     // }
     render() {
-        let {cat, border, inputValue, onDeleteItem } = this.props;
+        let {cat, inputValue, onDeleteItem } = this.props;
         // console.log('inputValue');
         // console.log(inputValue);
-        const listClassName = `MainBodyContentList ${border} pt-4 w-50`;
+        const listClassName = `MainBodyContentList mx-5`;
         cat === 'Финансы' ? cat = false : cat = true;
         // console.log('category');
         // console.log(cat);
@@ -44,7 +44,7 @@ class MainBodyContentList extends Component {
                                     //     onClick={() => {console.log(label)}}>
                                     //     {label}
                                     // </li>
-                                    <p className="ItemContainer d-flex align-items-center"
+                                    <p className="ItemContainer d-flex align-items-center px-5 py-2 my-2 bg-white rounded-lg"
                                         key={id}
                                         id={id}>
                                         <input key={inputKey}  
@@ -55,7 +55,7 @@ class MainBodyContentList extends Component {
                                         />
                                         <label htmlFor={inputKey}
                                             key={labelKey} 
-                                            className='flex-grow-1'
+                                            className='flex-grow-1 text-break text-wrap'
                                             id={labelKey}
                                             onClick={this.changeInputClass}>
                                                 {label}
@@ -63,12 +63,14 @@ class MainBodyContentList extends Component {
                                         <button
                                             key={deleteItemKey}
                                             type="button"
-                                            className="DeleteItem btn-trash btn-sm "
+                                            className="DeleteItem btn-trash btn-sm"
                                             id={deleteItemKey}
                                             // onClick={() => {console.log('Удалил!!!')}}
                                             onClick={()=> {onDeleteItem(id)}}
                                             >
-                                            <i className="fas fa-times"></i>
+                                            {/* <i className="fas fa-times"></i> */}
+                                            <i className="">Удалить</i>
+
                                         </button>
                                     </p>
                                 )

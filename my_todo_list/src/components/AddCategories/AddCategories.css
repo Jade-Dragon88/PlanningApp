@@ -1,0 +1,12 @@
+.AddCategories{
+    /* height: 50px; */
+    /* opacity: .9; */
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+.AddCategoriesContant{
+    background-color: #fff !important;
+    /* opacity: 1 !important; */
+}

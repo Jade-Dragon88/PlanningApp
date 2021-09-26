@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './MainInput.css'
+import './Input.css'
 
-class MainInput extends Component {
+class Input extends Component {
     constructor(props) {
         super(props);
         let {checked} = this.props;
@@ -36,7 +36,8 @@ class MainInput extends Component {
     }
     render() {
         let categoryButton;
-        // let {checked} = this.props;
+        let {title, displayCatBtn, placeholder} = this.props;
+        displayCatBtn ? displayCatBtn='d-block':displayCatBtn='d-none';
         this.state.checked ? categoryButton = 'Личное': categoryButton = 'Финансы';
         return (
             <form
@@ -44,25 +45,25 @@ class MainInput extends Component {
               onSubmit = {this.onSubmit}>
                 <h4
                   className="my-0 mx-3">
-                    Новый пункт
+                    {title}
                 </h4>
                 <button
                   type      ="button"
-                  className ="CategoryButton btn btn-outline-secondary mx-3"
+                  className ={`CategoryButton ${displayCatBtn} btn btn-outline-secondary mx-3 rounded-lg`}
                   onClick   = {this.onClickBtn}>
                     {categoryButton}
                 </button>
                 <input 
                   type      = "text" 
-                  className = "NewNote mx-3 px-2 py-1"
+                  className = "NewNote mx-3 px-2 py-1 rounded-lg"
                   onChange  = {this.onValueChange}
                   value     = {this.state.text}
                   title=""
-                  placeholder=""
+                  placeholder={`${placeholder}`}
                 />
                 <button
                   type      ="submit"
-                  className ="AddButton btn btn-outline-secondary mx-3"
+                  className ="AddButton btn btn-outline-secondary mx-3 rounded-lg"
                   /* onClick={}*/>
                     Добавить
                 </button>
@@ -71,4 +72,4 @@ class MainInput extends Component {
     }
 }
 
-export default MainInput;
+export default Input;
