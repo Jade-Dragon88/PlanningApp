@@ -8,5 +8,6 @@
 }
 .AddCategoriesContant{
     background-color: #fff !important;
+    min-height: 50vh;
     /* opacity: 1 !important; */
 }

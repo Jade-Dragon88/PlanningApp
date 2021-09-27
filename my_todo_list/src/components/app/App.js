@@ -4,7 +4,7 @@ import './App.css';
 // import React from 'react';
 import React, { Component } from 'react'
 import AddCategories from '../AddCategories/AddCategories'
-import Header from '../Header/Header'
+import { Header as AppHeader } from '../Header/Header'
 import MainBody from '../MainBody/MainBody'
 
 
@@ -31,8 +31,10 @@ class App extends Component {
     // const { categories } = this.state;
     return (
       <div className="Main">
-        <AddCategories addCat={this.addCat}/>
-        <Header name="МОИ ПЛАНЫ"
+        <AddCategories addCat={this.addCat}
+                           cats={this.state.categories}
+        />
+        <AppHeader name="МОИ ПЛАНЫ"
                 margin='my-5'
         />
         <MainBody cats={this.state.categories}/>

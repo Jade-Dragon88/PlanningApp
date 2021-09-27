@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './MainBody.css';
 
 import Category from '../Categories/category';
-import Input from '../Input/Input';
-import MainBodyContent from '../MainBody_Content/MainBody_Content'
+import { Input as MainBodyInput } from '../Input/Input';
+import { MainBodyContent } from '../MainBody_Content/MainBody_Content'
 
 let nextId = () => {return Math.random().toString(36).substr(2, 7);};
 
@@ -65,7 +65,7 @@ class MainBody extends Component {
         return (
             <div 
               className="MainBody">
-                <Input checked = {false}
+                <MainBodyInput checked = {false}
                            onAdd={this.addItem}
                            title=''
                            displayCatBtn={true}

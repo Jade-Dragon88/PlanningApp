@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MainBodyContentList from '../MainBodyContent_list/MainBodyContentList'
+import { ContentList as MainBodyContentList } from '../Content_list/ContentList'
 import './MainBody_Content.css'
 
 class MainBodyContent extends Component {
@@ -22,6 +22,7 @@ class MainBodyContent extends Component {
                         // border = 'right' 
                         inputValue = {inputValue}
                         onDeleteItem = {onDeleteItem}
+                        nameOfClass = 'MainBody'
                     />
                 </div>
                 <div className='w-50 left' border = 'left'>
@@ -30,6 +31,8 @@ class MainBodyContent extends Component {
                         // border = 'left'  
                         inputValue = {inputValue}
                         onDeleteItem = {onDeleteItem}
+                        nameOfClass = 'MainBody'
+                        checkBox={true}
                     />
                 </div>
                 
@@ -38,4 +41,4 @@ class MainBodyContent extends Component {
     }
 }
 
-export default MainBodyContent;
+export {MainBodyContent};

@@ -1,10 +1,11 @@
-.MainBodyContentList .left{
+div[class*="_ContentList"] .left{
     /* border-left: 1px solid black; */
     margin-left: 5%;
     margin-right: 7.5%;
+    /* border: 5px solid black; */
     /* background: #bde2f3; */
 }
-.MainBodyContentList .right{
+div[class*="_ContentList"] .right{
     /* border-right: 1px solid black; */
     margin-left: 7.5%;
     margin-right: 5%;
@@ -14,7 +15,7 @@
     list-style-type: none !important;
     list-style-position: inside !important;
 } */
-.MainBodyContentList{
+div[class*="_ContentList"]{
     display: block;
     font-size: 21px;
     border: none;
@@ -23,12 +24,19 @@
     color: #212529;
     text-decoration: none;
     background-color: #bde2f3;
+    border: 1px solid black;
 }
-/* .MainBodyContentList i{
-    color:crimson;
-} */
-
-.MainBodyContentList .custom_checkbox_label:hover{
+div.AddCategories_ContentList{
+    display: block;
+    font-size: 21px;
+    border: none;
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: white;
+}
+.custom-checkbox+label:hover{
     cursor: pointer;
 }
 .custom-checkbox {
