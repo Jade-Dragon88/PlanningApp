@@ -11,3 +11,7 @@
     min-height: 50vh;
     /* opacity: 1 !important; */
 }
+.noCheckBox::before{
+  /* color: red !important; */
+  display: none !important;
+}

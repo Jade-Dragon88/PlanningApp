@@ -20,10 +20,10 @@ class ContentList extends Component {
 				let {cat, inputValue, onDeleteItem, nameOfClass, checkBox } = this.props;
 				// console.log('inputValue');
 				// console.log(inputValue);
-				let checkBoxDisplay;
-				const listClassName = `${nameOfClass}_ContentList mx-5`;
+				// let checkBoxDisplay;
 				cat === 'Финансы' ? cat = false : cat = true;
-				checkBox ? checkBoxDisplay = 'd-inline-flex' : checkBoxDisplay = 'd-none';
+				checkBox === true ? checkBox = '' : checkBox = 'noCheckBox';
+				const listClassName = `${nameOfClass}_ContentList mx-5`;
 				// console.log('category');
 				// console.log(cat);
 				// console.log('n');
@@ -57,7 +57,7 @@ class ContentList extends Component {
 																				/>
 																				<label htmlFor={inputKey}
 																						key={labelKey} 
-																						className={`custom-checkbox_label ${checkBoxDisplay} flex-grow-1 text-break text-wrap`}
+																						className={`custom-checkbox_label ${checkBox} flex-grow-1 text-break text-wrap`}
 																						id={labelKey}
 																						onClick={this.changeInputClass}>
 																								{label}

@@ -72,6 +72,10 @@ div.AddCategories_ContentList{
 .custom-checkbox:checked+label{
     text-decoration: line-through;
 }
+.noCheckBox:checked+label{
+  text-decoration: none !important;
+}
+
 /* стили при наведении курсора на checkbox */
 .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
     border-color: #31ef0b48;

@@ -12,6 +12,7 @@ import { Button as AddCategoriesButton } from '../Button/Button'
 //     AddCategoriesButton      = Button;
 
 let nextId = () => {return Math.random().toString(36).substr(2, 7);};
+let displayAddCategoriesForm = 'd-flex';
 
 class AddCategories extends Component {
     constructor(props) {
@@ -20,13 +21,14 @@ class AddCategories extends Component {
             categories:[]
         }
         this.addCat = this.addCat.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
     addCat(){
         const newItem = {
             cat:!arguments[0],
             label:arguments[1],
             id: nextId()
-    };
+        };
         // console.log(newItem);
         this.setState(
             ({categories})=> {
@@ -36,15 +38,26 @@ class AddCategories extends Component {
                 };
             }   
         )
+    
         // console.log(this.state.categories);
     }
+    onSubmit(){
+      console.log('@@@@@@@@@@');
+      let {setCat} = this.props;
+      setCat(this.state['categories'])
+      // displayAddCategoriesForm = 'd-none';
+      console.log(document.querySelector('.AddCategories'));
+      document.querySelector('.AddCategories').classList.add('d-none');
+    };
     render() {
         console.log(this.state.categories);
+        // const {setCat} = this.props;
         return (
             <div
-              className='AddCategories position-absolute w-100 vh-100 d-flex justify-content-center align-items-center'>
+              className={`AddCategories position-absolute w-100 vh-100 ${displayAddCategoriesForm} justify-content-center align-items-center`}>
                 <div
-                  className='AddCategoriesContant d-flex flex-column p-5 rounded-lg'>
+                  className='AddCategoriesContant d-flex flex-column p-5 rounded-lg'
+                  >
                     <AddCategoriesHeader 
                         name="Добро пожаловать"
                         margin='mb-5'
@@ -61,10 +74,12 @@ class AddCategories extends Component {
                         inputValue = {this.state.categories}
                         onDeleteItem={()=>{console.log('1')}}
                         nameOfClass = 'AddCategories'
-                        checkBox={true}
+                        checkBox={false}
                     />
                     <AddCategoriesButton
+                        type="submit"
                         nameOfClass='AddCategories'
+                        onClick = {this.onSubmit}
                     />
                 </div>
             </div>

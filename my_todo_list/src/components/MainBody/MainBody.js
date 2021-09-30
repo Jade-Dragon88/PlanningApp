@@ -58,7 +58,7 @@ class MainBody extends Component {
         // console.log(inputValue);
         let catsToRender = cats.map(item => {
             return (
-                <Category nm={item} key={nextId()}/>
+                <Category nm={item['label']} key={nextId()}/>
             )
         })
         // console.log(catsToRender);

@@ -14,30 +14,38 @@ class App extends Component {
     super(props);
     this.state = {
       categories: [
-        'Финансы',
-        'Личное'
+        // 'Финансы',
+        // 'Личное'
       ]
     }
-    this.addCat = this.addCat.bind(this);
+    this.setCat = this.setCat.bind(this);
   }
-  addCat(){
+  setCat(){
     // this.setState(item => console.log(item))
-    const newCat = arguments[1];
-    // console.log(newCat);
-    this.state.categories.push(newCat);
-    console.log(this.state.categories);
+    const newCats = arguments[0];
+    // console.log(newCats);
+    this.state.categories.push(newCats);
+    // console.log(this.state['categories']);
+    this.setState(
+      ({categories})=> {
+          const newArr = [...newCats];
+          return {
+              categories: newArr
+          };
+      }   
+  )
   }
   render() {
     // const { categories } = this.state;
     return (
       <div className="Main">
-        <AddCategories addCat={this.addCat}
-                           cats={this.state.categories}
+        <AddCategories setCat={this.setCat}
+                      cats={this.state.categories}
         />
         <AppHeader name="МОИ ПЛАНЫ"
                 margin='my-5'
         />
-        <MainBody cats={this.state.categories}/>
+        <MainBody cats={this.state['categories']}/>
       </div>
     )
   }

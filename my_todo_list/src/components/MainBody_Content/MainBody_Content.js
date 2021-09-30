@@ -23,6 +23,7 @@ class MainBodyContent extends Component {
                         inputValue = {inputValue}
                         onDeleteItem = {onDeleteItem}
                         nameOfClass = 'MainBody'
+                        checkBox ={true}
                     />
                 </div>
                 <div className='w-50 left' border = 'left'>

@@ -8,11 +8,13 @@ class Button extends Component {
         this.state = {}
     }
     render() {
-        const {nameOfClass} = this.props;
+        const {type, nameOfClass, onClick} = this.props;
         return (
             <button
-              type="button"
-              className={`${nameOfClass}_Btn btn btn-outline-secondary rounded-lg mt-auto w-50 align-self-center`}>
+              type={type}
+              className={`${nameOfClass}_Btn btn btn-outline-secondary rounded-lg mt-auto w-50 align-self-center`}
+              onClick = {onClick}
+              >
                 Начать
             </button>
         )
