@@ -23,7 +23,6 @@ class App extends Component {
     const newCats = arguments[0];
     // console.log(newCats);
     this.state.categories.push(newCats);
-    // console.log(this.state['categories']);
     this.setState(
       ({categories})=> {
           const newArr = [...newCats];
@@ -32,6 +31,7 @@ class App extends Component {
           };
       }   
     );
+    console.log(this.state['categories']);
   }
   render() {
     // const { categories } = this.state;

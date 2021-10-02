@@ -14,8 +14,7 @@ class Button extends Component {
             <button
               type={type}
               className={`${nameOfClass}_Btn btn btn-outline-secondary rounded-lg mt-auto w-50 align-self-center`}
-              onClick = {onClick}
-              >
+              onClick = {onClick}>
                 Начать
             </button>
         )

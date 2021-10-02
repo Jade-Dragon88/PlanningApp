@@ -47,11 +47,11 @@ class AddCategories extends Component {
       let {setCat} = this.props;
       setCat(this.state['categories'])
       // displayAddCategoriesForm = 'd-none';
-      console.log(document.querySelector('.AddCategories'));
+      // console.log(document.querySelector('.AddCategories'));
       document.querySelector('.AddCategories').classList.add('d-none');
     };
     render() {
-        console.log(this.state.categories);
+        // console.log(this.state.categories);
         // const {setCat} = this.props;
         return (
             <div

@@ -67,11 +67,11 @@ class MainBody extends Component {
             <div 
               className="MainBody">
                 <MainBodyInput checked = {false}
-                           onAdd={this.addItem}
-                           title=''
-                           displayCatBtn={true}
-                           placeholder='Добавьте новый пункт'
-                           cats = {cats}
+                          onAdd={this.addItem}
+                          title='Выбери категорию'
+                          displayCatBtn={true}
+                          placeholder='Добавьте новый пункт'
+                          cats = {cats}
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">
@@ -79,6 +79,7 @@ class MainBody extends Component {
                 </div>
                 <MainBodyContent inputValue={data}
                                  onDeleteItem={this.onDeleteItem}
+                                 cats = {cats}
                 />
             </div>
         );

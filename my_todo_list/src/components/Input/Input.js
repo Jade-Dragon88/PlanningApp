@@ -6,13 +6,18 @@ class Input extends Component {
     constructor(props) {
         super(props);
         let {checked, cats} = this.props;
+        let catsNames;
+        if (cats){
+          catsNames = cats.map(item => {return item.label})
+        }
             // categoryButton;
         this.state = {
             checked: checked,
             text: '',
-            categoryButton: '',
+            categoryButton: '...',
             numOfClick:0,
         }
+        // console.log(this.state.categoryButton);
         this.onClickBtn = this.onClickBtn.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.onValueChange = this.onValueChange.bind(this);

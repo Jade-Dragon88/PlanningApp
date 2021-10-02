@@ -9,11 +9,24 @@ class MainBodyContent extends Component {
         this.state = {}
     }
     render() {
-        const { inputValue, onDeleteItem } = this.props;
+        const { inputValue, onDeleteItem, cats } = this.props;
         // console.log(inputValue);
         // let toFin='',toMe='';
         // if(type === 'финансы'){toFin=inputValue; toMe=''}
         // if(type==='личные'){toFin=''; toMe=inputValue}
+        cats.map(item => {
+          return(
+            <div className='w-50'>
+                <MainBodyContentList 
+                    cat = {item.label} 
+                    // border = 'right' 
+                    inputValue = {inputValue}
+                    onDeleteItem = {onDeleteItem}
+                    nameOfClass = 'MainBody'
+                    checkBox ={true}/>
+            </div>
+          )
+        })
         return (
             <div
               className='MainBodyContent d-flex justify-content-center w-100 mt-3'>
@@ -25,8 +38,7 @@ class MainBodyContent extends Component {
                         inputValue = {inputValue}
                         onDeleteItem = {onDeleteItem}
                         nameOfClass = 'MainBody'
-                        checkBox ={true}
-                    />
+                        checkBox ={true}/>
                 </div>
                 {/* @ts-ignore */}
                 <div className='w-50 left' border = 'left'>
@@ -36,8 +48,7 @@ class MainBodyContent extends Component {
                         inputValue = {inputValue}
                         onDeleteItem = {onDeleteItem}
                         nameOfClass = 'MainBody'
-                        checkBox={true}
-                    />
+                        checkBox={true}/>
                 </div>
                 
             </div>
