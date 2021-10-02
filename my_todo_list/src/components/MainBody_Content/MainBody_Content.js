@@ -14,7 +14,7 @@ class MainBodyContent extends Component {
         // let toFin='',toMe='';
         // if(type === 'финансы'){toFin=inputValue; toMe=''}
         // if(type==='личные'){toFin=''; toMe=inputValue}
-        cats.map(item => {
+        let contentLists = cats.map(item => {
           return(
             <div className='w-50'>
                 <MainBodyContentList 
@@ -31,7 +31,7 @@ class MainBodyContent extends Component {
             <div
               className='MainBodyContent d-flex justify-content-center w-100 mt-3'>
                 {/* @ts-ignore */}
-                <div className='w-50 right' border = 'right'>
+                {/* <div className='w-50 right' border = 'right'>
                     <MainBodyContentList 
                         cat = 'Финансы' 
                         // border = 'right' 
@@ -39,9 +39,9 @@ class MainBodyContent extends Component {
                         onDeleteItem = {onDeleteItem}
                         nameOfClass = 'MainBody'
                         checkBox ={true}/>
-                </div>
+                </div> */}
                 {/* @ts-ignore */}
-                <div className='w-50 left' border = 'left'>
+                {/* <div className='w-50 left' border = 'left'>
                     <MainBodyContentList 
                         cat = 'Личное'  
                         // border = 'left'  
@@ -49,8 +49,8 @@ class MainBodyContent extends Component {
                         onDeleteItem = {onDeleteItem}
                         nameOfClass = 'MainBody'
                         checkBox={true}/>
-                </div>
-                
+                </div> */}
+                {contentLists}
             </div>
         )
     }

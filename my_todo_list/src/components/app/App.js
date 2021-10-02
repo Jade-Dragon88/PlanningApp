@@ -43,7 +43,7 @@ class App extends Component {
         <AppHeader name="МОИ ПЛАНЫ"
                 margin='my-5'
         />
-        <MainBody cats={this.state['categories']}/>
+        {<MainBody cats={this.state['categories']}/> /* {cat: true, label: 'ewrtgb', id: '0ineyq0'} */}
       </div>
     )
   }

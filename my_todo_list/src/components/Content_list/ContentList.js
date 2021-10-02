@@ -19,20 +19,20 @@ class ContentList extends Component {
 		// }
 		render() {
 				let {cat, inputValue, onDeleteItem, nameOfClass, checkBox } = this.props;
-				// console.log('inputValue');
-				// console.log(inputValue);
+				console.log('inputValue');
+				console.log(inputValue);
 				// let checkBoxDisplay;
-				cat === 'Финансы' ? cat = false : cat = true;
+				// cat === 'Финансы' ? cat = false : cat = true;
 				checkBox === true ? checkBox = '' : checkBox = 'noCheckBox';
 				const listClassName = `${nameOfClass}_ContentList mx-5`;
-				// console.log('category');
-				// console.log(cat);
+				console.log('category');
+				console.log(cat);
 				// console.log('n');
 				// console.log(n);
 				let liElements;
 				// if(inputValue[n] && (cat == inputValue[n].cat)){
 				if(inputValue[0]){
-						liElements =  inputValue
+						liElements = inputValue
 														.filter(item => item.cat === cat)
 														.map((item) => {
 																const {label, id} = item;
