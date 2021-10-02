@@ -1,3 +1,4 @@
+//@ts-check
 import React, { Component } from 'react'
 import './AddCategories.css'
 import { Header as AddCategoriesHeader } from "../Header/Header"

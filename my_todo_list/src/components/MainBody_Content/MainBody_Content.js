@@ -1,3 +1,4 @@
+//@ts-check
 import React, { Component } from 'react'
 import { ContentList as MainBodyContentList } from '../Content_list/ContentList'
 import './MainBody_Content.css'
@@ -16,6 +17,7 @@ class MainBodyContent extends Component {
         return (
             <div
               className='MainBodyContent d-flex justify-content-center w-100 mt-3'>
+                {/* @ts-ignore */}
                 <div className='w-50 right' border = 'right'>
                     <MainBodyContentList 
                         cat = 'Финансы' 
@@ -26,6 +28,7 @@ class MainBodyContent extends Component {
                         checkBox ={true}
                     />
                 </div>
+                {/* @ts-ignore */}
                 <div className='w-50 left' border = 'left'>
                     <MainBodyContentList 
                         cat = 'Личное'  

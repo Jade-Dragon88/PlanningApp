@@ -1,3 +1,4 @@
+//@ts-check
 import React, { Component } from 'react'
 import './category.css'
 

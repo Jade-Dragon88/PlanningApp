@@ -1,12 +1,10 @@
-// import logo from './logo.svg';
-import './App.css';
+//@ts-check
 
-// import React from 'react';
 import React, { Component } from 'react'
 import AddCategories from '../AddCategories/AddCategories'
 import { Header as AppHeader } from '../Header/Header'
 import MainBody from '../MainBody/MainBody'
-
+import './App.css';
 
 
 class App extends Component {
@@ -40,7 +38,7 @@ class App extends Component {
     return (
       <div className="Main">
         <AddCategories setCat={this.setCat}
-                      cats={this.state.categories}
+                       cats={this.state.categories}
         />
         <AppHeader name="МОИ ПЛАНЫ"
                 margin='my-5'
