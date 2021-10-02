@@ -42,7 +42,7 @@ class AddCategories extends Component {
         // console.log(this.state.categories);
     }
     onSubmit(){
-      console.log('@@@@@@@@@@');
+      // console.log('@@@@@@@@@@');
       let {setCat} = this.props;
       setCat(this.state['categories'])
       // displayAddCategoriesForm = 'd-none';

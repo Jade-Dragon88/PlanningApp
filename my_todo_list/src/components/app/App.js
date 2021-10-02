@@ -33,7 +33,7 @@ class App extends Component {
               categories: newArr
           };
       }   
-  )
+    );
   }
   render() {
     // const { categories } = this.state;

@@ -4,10 +4,13 @@ import './Input.css'
 class Input extends Component {
     constructor(props) {
         super(props);
-        let {checked} = this.props;
+        let {checked, cats} = this.props;
+            // categoryButton;
         this.state = {
             checked: checked,
             text: '',
+            categoryButton: '',
+            numOfClick:0,
         }
         this.onClickBtn = this.onClickBtn.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -16,7 +19,16 @@ class Input extends Component {
     onClickBtn(){
         this.setState({
             checked: !this.state.checked,
+            numOfClick: ++(this.state.numOfClick),
         })
+        let [cats] = arguments;
+        // console.log(cats);
+        this.setState({
+          categoryButton : cats[this.state.numOfClick % cats.length].label
+        })
+        console.log(this.state.categoryButton);
+        // numOfClick++;
+
     }
 
     onValueChange(e){
@@ -35,10 +47,11 @@ class Input extends Component {
       });
     }
     render() {
-        let categoryButton;
-        let {title, displayCatBtn, placeholder} = this.props;
+        // console.log(this.state.categoryButton);
+        let numOfClick = 0;
+        let {title, displayCatBtn, placeholder, cats} = this.props;
         displayCatBtn ? displayCatBtn='d-block':displayCatBtn='d-none';
-        this.state.checked ? categoryButton = 'Личное': categoryButton = 'Финансы';
+        // this.state.checked ? categoryButton = 'Личное': categoryButton = 'Финансы';
         return (
             <form
               className='MainInput d-flex justify-content-center align-items-center mb-5'
@@ -50,8 +63,10 @@ class Input extends Component {
                 <button
                   type      ="button"
                   className ={`CategoryButton ${displayCatBtn} btn btn-outline-secondary mx-3 rounded-lg`}
-                  onClick   = {this.onClickBtn}>
-                    {categoryButton}
+                  // onClick   = {this.onClickBtn}
+                  onClick   ={() => {this.onClickBtn(cats)}}
+                  >
+                    {this.state.categoryButton}
                 </button>
                 <input 
                   type      = "text" 

@@ -70,6 +70,7 @@ class MainBody extends Component {
                            title=''
                            displayCatBtn={true}
                            placeholder='Добавьте новый пункт'
+                           cats = {cats}
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">
