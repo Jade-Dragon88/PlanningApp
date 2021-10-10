@@ -71,7 +71,7 @@ class MainBody extends Component {
                           title='Выбери категорию'
                           displayCatBtn={true}
                           placeholder='Добавьте новый пункт'
-                          cats = {cats}
+                          cats = {cats} /* {cat: true, label: 'ewrtgb', id: '0ineyq0'} */
                 />
                 <div
                   className="MainBody_Header d-flex justify-content-around align-items-center">

@@ -2,11 +2,16 @@
 import React, { Component } from 'react'
 import './Input.css'
 
+
+
+let catsNames=['...'];
 class Input extends Component {
     constructor(props) {
         super(props);
-        let {checked, cats} = this.props;
-        let catsNames;
+        let { checked } = this.props; /* {cat: true, label: 'ewrtgb', id: '0ineyq0'} */
+        let { cats } = this.props;
+        // console.log(cats);
+        // let catsNames=['...'];
         if (cats){
           catsNames = cats.map(item => {return item.label})
         }
@@ -14,7 +19,7 @@ class Input extends Component {
         this.state = {
             checked: checked,
             text: '',
-            categoryButton: '...',
+            categoryButton: catsNames[0],
             numOfClick:0,
         }
         // console.log(this.state.categoryButton);
@@ -31,8 +36,11 @@ class Input extends Component {
         // console.log(cats);
         this.setState({
           categoryButton : cats[this.state.numOfClick % cats.length].label
+          // categoryButton : cats[this.state.numOfClick % cats.length].label
+          // categoryButton : cats[this.state.numOfClick % cats.length].label
+          return{ categoryButton : cats[this.state.numOfClick % cats.length].label }
         })
-        console.log(this.state.categoryButton);
+        // console.log(this.state.categoryButton);
         // numOfClick++;
 
     }
@@ -56,6 +64,7 @@ class Input extends Component {
         // console.log(this.state.categoryButton);
         let numOfClick = 0;
         let {title, displayCatBtn, placeholder, cats} = this.props;
+        console.log(catsNames);
         displayCatBtn ? displayCatBtn='d-block':displayCatBtn='d-none';
         // this.state.checked ? categoryButton = 'Личное': categoryButton = 'Финансы';
         return (

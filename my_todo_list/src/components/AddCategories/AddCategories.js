@@ -24,10 +24,10 @@ class AddCategories extends Component {
         this.addCat = this.addCat.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
-    addCat(){
+    addCat(...cats){
         const newItem = {
-            cat:!arguments[0],
-            label:arguments[1],
+            cat:!cats[0],
+            label:cats[1],
             id: nextId()
         };
         // console.log(newItem);
@@ -45,10 +45,12 @@ class AddCategories extends Component {
     onSubmit(){
       // console.log('@@@@@@@@@@');
       let {setCat} = this.props;
-      setCat(this.state['categories'])
+      setCat(this.state['categories']) // - передаётся массив из объектов [{},{},{} ...]
+      // console.log(this.state['categories']);
       // displayAddCategoriesForm = 'd-none';
-      // console.log(document.querySelector('.AddCategories'));
+      // console.dir(document.querySelector('.CategoryButton'));
       document.querySelector('.AddCategories').classList.add('d-none');
+      // document.querySelector('.CategoryButton').textContent = this.state['categories'][0].label;
     };
     render() {
         // console.log(this.state.categories);
